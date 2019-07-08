@@ -9,15 +9,13 @@ SIZE = 10
 MIN_ITEM = -100
 MAX_ITEM = 100
 array = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
-# array = [random.randint(MIN_ITEM, MAX_ITEM)] * SIZE
-#  показать всем, что так не работает!!!
 print(array)
 
 result = []
 for i in range(len(array)):
     if array[i] % 2 == 0:
         result.append(i)
-print(f'Индексы четных элементов: {result}')
+print(f'Индексы чётных элементов: {result}')
 
 result_new = [i for i in range(len(array)) if array[i] % 2 == 0]
-print(f'Индексы четных элементов: {result_new}')
+print(f'Индексы чётных элементов: {result_new}')
