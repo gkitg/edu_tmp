@@ -27,3 +27,6 @@ def sum_memory(objects):
                   f'и занимает {sys.getsizeof(value)} байт')
 
     return sum_mem
+
+
+# https://www.geeksforgeeks.org/python-programming-language/
