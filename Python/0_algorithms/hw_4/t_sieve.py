@@ -18,12 +18,11 @@ def prime(num):
                664579: 10 ** 7,
                5761455: 10 ** 8,
                }
-    for key in pi_func.keys():
+    for key, size in pi_func.items():
         if num <= key:
-            size = pi_func[key]
             break
 
-    array = [i for i in range(size)]
+    array = list(range(size))
 
     array[1] = 0
     for i in range(2, size):

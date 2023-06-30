@@ -12,7 +12,7 @@ while num > 0:
         even += 1
     else:
         odd += 1
-    num = num // 10
+    num //= 10
 
 print(sys.getsizeof(even))
 print(sys.getsizeof(odd))
@@ -29,7 +29,7 @@ while num > 0:
         even += 1
     else:
         odd += 1
-    num = num // 10
+    num //= 10
 
 sum_ += sys.getsizeof(even)
 sum_ += sys.getsizeof(odd)

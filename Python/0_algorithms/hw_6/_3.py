@@ -12,9 +12,8 @@ length = 900
 @profile
 def recursion(length):
     def sum_series_numbers(n, elem=1):
-        if n <= 0:
-            return 0
-        return elem + sum_series_numbers(n - 1, -elem/2)
+        return 0 if n <= 0 else elem + sum_series_numbers(n - 1, -elem/2)
+
     print(f'Сумма последовательности из {length} элементов равна {sum_series_numbers(length)}')
 
 
@@ -22,7 +21,7 @@ def recursion(length):
 def for_in(length):
     elem = 1
     amount = 0
-    for i in range(length):
+    for _ in range(length):
         amount += elem
         elem = -elem / 2
     print(f'Сумма последовательности из {length} элементов равна {amount}')

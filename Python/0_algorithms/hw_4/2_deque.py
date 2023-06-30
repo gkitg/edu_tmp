@@ -13,16 +13,16 @@ y = deque(input("Введите второе число: "))
 
 
 def hex_sum(x, y):
-    x = "".join([i for i in x])
-    y = "".join([i for i in y])
+    x = "".join(list(x))
+    y = "".join(list(y))
     s = hex((int(float.fromhex(x) + float.fromhex(y))))
     s = deque(s[2::].upper())
     print("Сумма:", s)
 
 
 def hex_mul(x, y):
-    x = "".join([i for i in x])
-    y = "".join([i for i in y])
+    x = "".join(list(x))
+    y = "".join(list(y))
     s = hex((int(float.fromhex(x) * float.fromhex(y))))
     s = deque(s[2::].upper())
     print("Произведение:", s)

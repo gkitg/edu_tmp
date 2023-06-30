@@ -9,16 +9,12 @@ MAX_ITEM = -750
 array = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
 print(array)
 
-# вариант 1
-i = 0
 index = -100500
-while i < len(array):   # или for i in range(len(array)):
+for i in range(len(array)):   # или for i in range(len(array)):
     if array[i] < 0 and index == -100500:
         index = i
     elif 0 > array[i] > array[index]:
         index = i
-    i += 1
-
 if index != -100500:
     print(f'Максимальное отрицательное число {array[index]} '
           f'находится в ячейке {index}')

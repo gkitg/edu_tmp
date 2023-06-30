@@ -35,8 +35,7 @@ def length_segment(x1: float, y1: float, x2: float, y2: float):
     """
     Вычисление длины отрезка
     """
-    segment = (((x1 - x2) ** 2) + ((y1 - y2) ** 2)) ** 0.5
-    return segment
+    return (((x1 - x2) ** 2) + ((y1 - y2) ** 2)) ** 0.5
 
 
 def equation_straight_line(x1: float, y1: float, x2: float, y2: float):
@@ -74,13 +73,13 @@ def run(coords=None):
 
     if line_a[0] == line_b[0] == line_c[0]:
         print("a || b || c")
-    elif (line_a[0] == line_b[0] and (line_a[0] != line_c[0] or line_b[0] != line_c[0])):
+    elif line_a[0] == line_b[0]:
         print("a || b")
         print(0)
-    elif (line_a[0] == line_c[0] and (line_a[0] != line_b[0] or line_c[0] != line_b[0])):
+    elif line_a[0] == line_c[0]:
         print("a || с")
         print(0)
-    elif (line_b[0] == line_c[0] and (line_b[0] != line_a[0] or line_c[0] != line_a[0])):
+    elif line_b[0] == line_c[0]:
         print("b || с")
         print(0)
     else:

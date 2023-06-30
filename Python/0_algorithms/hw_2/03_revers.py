@@ -11,7 +11,7 @@ num = int(input('Введите целое число: '))
 result = 0
 while num > 0:
     result = result * 10 + num % 10
-    num = num // 10
+    num //= 10
 print(result)
 
 # вариант 2

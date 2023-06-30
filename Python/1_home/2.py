@@ -26,11 +26,11 @@ a = float('inf')
 
 x = int(input())
 a = x % 10
-x = x // 10
+x //= 10
 while x > 0:
     if x % 10 > a:
         a = x % 10
-    x = x // 10
+    x //= 10
 print(a)
 
 
@@ -52,10 +52,10 @@ print('x =', x,'| ' 'y =', y)
 # Пример, если число 7089, вывести число 9807.
 
 x = int(input())
-a = 0 
+a = 0
 while x > 0:
     a = a * 10 + x % 10
-    x = x // 10
+    x //= 10
 print(a)
 
 

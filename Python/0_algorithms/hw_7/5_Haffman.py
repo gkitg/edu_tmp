@@ -21,10 +21,9 @@ def haffman_tree(s):
             for i, _count in enumerate(sorted_elements):
                 if weight > _count[1]:
                     continue
-                else:
-                    # Вставляем объеденный элемент
-                    sorted_elements.insert(i, (comb, weight))
-                    break
+                # Вставляем объеденный элемент
+                sorted_elements.insert(i, (comb, weight))
+                break
             else:
                 # Добавляем объеденный корневой элемент после
                 # завершения работы цикла
@@ -37,7 +36,7 @@ def haffman_tree(s):
     return sorted_elements[0][0]
 
 
-code_table = dict()
+code_table = {}
 
 
 def haffman_code(tree, path=''):

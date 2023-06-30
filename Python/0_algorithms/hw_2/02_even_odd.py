@@ -14,7 +14,7 @@ while num > 0:
         even += 1
     else:
         odd += 1
-    num = num // 10
+    num //= 10
 print(f"четных - {even}, нечетных - {odd}")
 
 

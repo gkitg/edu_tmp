@@ -15,10 +15,10 @@ import functools
 nums = collections.defaultdict(list)
 for d in range(2):
     n = input("Введите %d-е натуральное шестнадцатиричное число: " % (d+1))
-    nums["%s-%s" % (d+1, n)] = list(n)
+    nums[f"{d + 1}-{n}"] = list(n)
 print(nums)
 
-sum = sum([int(''.join(i), 16) for i in nums.values()])
+sum = sum(int(''.join(i), 16) for i in nums.values())
 print("Сумма: ", list('%X' % sum))
 
 mult = functools.reduce(lambda a, b: a * b, [int(''.join(i), 16) for i in nums.values()])

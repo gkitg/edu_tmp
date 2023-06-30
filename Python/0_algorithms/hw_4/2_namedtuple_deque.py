@@ -26,14 +26,13 @@ class HexCalc(object):
     def to_hex(self, x):
         if x < 16:
             return [str(x)]
-        else:
-            r = deque()
-            while x > 15:
-                d = x % 16
-                r.appendleft(str(d) if d < 10 else self.hex_letters._fields[d-10])
-                x = x // 16
-            r.appendleft(str(x) if x < 10 else self.hex_letters._fields[x-10])
-            return list(r)
+        r = deque()
+        while x > 15:
+            d = x % 16
+            r.appendleft(str(d) if d < 10 else self.hex_letters._fields[d-10])
+            x = x // 16
+        r.appendleft(str(x) if x < 10 else self.hex_letters._fields[x-10])
+        return list(r)
 
 
 a = input("Введите перове число в шестнадцатиричном формате: ").upper()

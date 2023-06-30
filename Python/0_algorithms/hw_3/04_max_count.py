@@ -11,10 +11,7 @@ print(array)
 num = array[0]
 frequency = 1
 for i in range(len(array)):
-    spam = 1
-    for j in range(i + 1, len(array)):
-        if array[i] == array[j]:
-            spam += 1
+    spam = 1 + sum(1 for j in range(i + 1, len(array)) if array[i] == array[j])
     if spam > frequency:
         frequency = spam
         num = array[i]

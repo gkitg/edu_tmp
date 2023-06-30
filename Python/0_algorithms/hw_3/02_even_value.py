@@ -11,10 +11,7 @@ MAX_ITEM = 100
 array = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
 print(array)
 
-result = []
-for i in range(len(array)):
-    if array[i] % 2 == 0:
-        result.append(i)
+result = [i for i in range(len(array)) if array[i] % 2 == 0]
 print(f'Индексы чётных элементов: {result}')
 
 result_new = [i for i in range(len(array)) if array[i] % 2 == 0]
