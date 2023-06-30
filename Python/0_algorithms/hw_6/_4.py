@@ -16,12 +16,12 @@ def func():
     if min_num > min_num2:
         min_num, min_num2 = min_num2, min_num
 
-    for i in range(len(a)):
-        if a[i] < min_num:
+    for item in a:
+        if item < min_num:
             min_num2 = min_num
-            min_num = a[i]
-        elif a[i] < min_num2:
-            min_num2 = a[i]
+            min_num = item
+        elif item < min_num2:
+            min_num2 = item
 
     print("Два наименьших элемента:", min_num, min_num2)
     del a

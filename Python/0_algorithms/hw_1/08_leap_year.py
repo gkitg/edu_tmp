@@ -12,14 +12,15 @@ if year % 4 != 0 or year % 100 == 0 and year % 400 != 0:
     print("Обычный")
 else:
     print("Високосный")
-    
+
 # длинный способ
-if year % 4 != 0:
-    print("Обычный")
-elif year % 100 == 0:
-    if year % 400 == 0:
-        print("Високосный")
-    else:
-        print("Обычный")
-else:
+if (
+    year % 4 == 0
+    and year % 100 == 0
+    and year % 400 == 0
+    or year % 4 == 0
+    and year % 100 != 0
+):
     print("Високосный")
+else:
+    print("Обычный")

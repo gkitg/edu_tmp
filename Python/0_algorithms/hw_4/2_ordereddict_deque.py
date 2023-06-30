@@ -17,7 +17,7 @@ def hex_to_decimal(num):
     for key, value in enumerate(HEX_NUMS):
         hex_number[value] = key
 
-    return sum([hex_number[j] * (16 ** i) for i, j in enumerate(num)])
+    return sum(hex_number[j] * (16 ** i) for i, j in enumerate(num))
 
 
 def decimal_to_hex(num):

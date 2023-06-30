@@ -37,7 +37,7 @@ def bubble_sort_upd(orig_list):
     return orig_list
 
 
-orig_list = [random.randint(-100, 100) for i in range(10)]
+orig_list = [random.randint(-100, 100) for _ in range(10)]
 
 print(timeit.timeit("bubble_sort(orig_list)", setup="from __main__ import bubble_sort, orig_list", number=1000000))
 print(timeit.timeit("bubble_sort_upd(orig_list)", setup="from __main__ import bubble_sort_upd, orig_list", number=1000000))

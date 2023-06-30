@@ -42,17 +42,15 @@ def simple(i):
 # Вариант 2 (решето Эратосфена)
 @profile
 def eratosfen(i):
-    n = 2
     l = 10000
-    sieve = [x for x in range(l)]
+    sieve = list(range(l))
     sieve[1] = 0
-    while n < l:
+    for n in range(2, l):
         if sieve[n] != 0:
             m = n*2
             while m < l:
                 sieve[m] = 0
                 m += n
-        n += 1
     return [p for p in sieve if p != 0][i-1]
 
 i = int(input('Введите порядковый номер искомого простого числа:'))

@@ -9,10 +9,7 @@ __author__ = 'gkitg'
 
 def sum_natural(n):
     assert n < 999, 'Слишком большое число'
-    if n == 1:
-        return n
-    sum_n = n + sum_natural(n - 1)
-    return sum_n
+    return n if n == 1 else n + sum_natural(n - 1)
 
 
 n = int(input('Введите любое натуральное число: '))

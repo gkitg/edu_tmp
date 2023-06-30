@@ -7,10 +7,7 @@ START_DIV = 2
 END_DIV = 9
 # вариант 1
 for i in range(START_DIV, END_DIV + 1):
-    frequency = 0
-    for j in range(START_NUM, END_NUM + 1):
-        if j % i == 0:
-            frequency += 1
+    frequency = sum(1 for j in range(START_NUM, END_NUM + 1) if j % i == 0)
     print(f'Числу {i} кратно {frequency} чисел')
 
 # вариант 2

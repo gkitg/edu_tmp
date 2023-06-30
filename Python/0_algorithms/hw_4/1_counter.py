@@ -2,14 +2,12 @@ import collections
 
 
 n = int(input("Введите количество предприятий для расчета прибыли: "))
-d = dict()
-a = 1
-for i in range(n):
+d = {}
+for a, _ in enumerate(range(n), start=1):
     name = input("Введите название предприятия: ")
     pr = input("через пробел введите прибыль данного предприятия\nза каждый квартал(Всего 4 квартала): ")
     profit = pr.split(" ")
     d[name] = profit
-    a += 1
     print()
 
 fab = collections.Counter(d)
@@ -17,20 +15,18 @@ fab = collections.Counter(d)
 sc = []
 b = 0
 t = 0
-for i in fab:
-    summ = 0
-    for j in fab[i]:
-        summ += int(j)
+for i, value in fab.items():
+    summ = sum(int(j) for j in value)
     fab[i] = summ
     t += summ
     b += 1
 sec = t / b
 
-print("Средняя годовая прибыль всех предприятий: " + str(sec))
+print(f"Средняя годовая прибыль всех предприятий: {str(sec)}")
 bigger = []
 smaller = []
-for i in fab:
-    if int(fab[i]) >= sec:
+for i, value_ in fab.items():
+    if int(value_) >= sec:
         bigger.append(i)
     else:
         smaller.append(i)

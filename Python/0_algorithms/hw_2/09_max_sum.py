@@ -8,9 +8,7 @@ __author__ = 'gkitg'
 
 
 def sum_digits(number):
-    if number < 10:
-        return number
-    return number % 10 + sum_digits(number // 10)
+    return number if number < 10 else number % 10 + sum_digits(number // 10)
 
 
 num = int(input('Введите натуральное число. Ноль - выйти   '))

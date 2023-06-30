@@ -23,7 +23,5 @@ if idx_min > idx_max:
 print(f'Левая граница: {array[idx_min]}\n'
       f'Правая граница: {array[idx_max]}')
 
-summ = 0
-for i in range(idx_min + 1, idx_max):
-    summ += array[i]
+summ = sum(array[i] for i in range(idx_min + 1, idx_max))
 print(f'Сумма = {summ}')

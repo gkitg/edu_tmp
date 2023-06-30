@@ -12,7 +12,7 @@ for i in range(n):
     org_lst.append(new_org)
     print("-" * 5)
 
-avg = sum([i.get('q_sum', 0.0) for i in org_lst]) / n
+avg = sum(i.get('q_sum', 0.0) for i in org_lst) / n
 print(f"Предприятия с общей прибылью выше среднего (среднее = {avg:.2f}):",
       ", ".join([f"{i.get('name')} ({i.get('q_sum')})" for i in org_lst if i.get('q_sum', 0.0) > avg]))
 

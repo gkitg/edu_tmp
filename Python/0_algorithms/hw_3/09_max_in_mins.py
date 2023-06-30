@@ -16,9 +16,9 @@ max_ = None
 for j in range(len(matrix[0])):
     min_ = matrix[0][j]
 
-    for i in range(len(matrix)):
-        if matrix[i][j] < min_:
-            min_ = matrix[i][j]
+    for item in matrix:
+        if item[j] < min_:
+            min_ = item[j]
 
     if max_ is None or max_ < min_:
         max_ = min_
